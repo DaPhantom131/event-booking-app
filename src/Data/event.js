@@ -1,3 +1,12 @@
+import aiImg from "../Assets/Image/AI.jpg"
+import artImg from "../Assets/Image/Art.jpg"
+import businessImg from "../Assets/Image/Business.jpg"
+import foodImg from "../Assets/Image/Food.jpg"
+import gamingImg from "../Assets/Image/Gaming.jpg"
+import musicImg from "../Assets/Image/Music.jpg"
+import sportImg from "../Assets/Image/Sport.jpg"
+import techImg from "../Assets/Image/Tech.jpg"
+
 
 export const events = [
    
@@ -7,7 +16,8 @@ export const events = [
         type: "Tech",
         date: "2026-07-10",
         seats: 50,
-        description: "Technology conference."
+        description: "Technology conference.",
+        image: techImg
     },
 
     {
@@ -16,7 +26,8 @@ export const events = [
         type: "Music",
         date: "2026-07-12",
         seats: 100,
-        description: "Live music festival."
+        description: "Live music festival.",
+        image: musicImg
     },
 
     {
@@ -25,7 +36,8 @@ export const events = [
         type: "Business",
         date: "2026-07-15",
         seats: 40,
-        description: "Business networking event."
+        description: "Business networking event.",
+        image: businessImg
     },
 
     {
@@ -34,7 +46,8 @@ export const events = [
         type: "Tech",
         date: "2026-07-18",
         seats: 30,
-        description: "Learn AI basics."
+        description: "Learn AI basics.",
+        image: aiImg
     },
 
     {
@@ -43,7 +56,8 @@ export const events = [
         type: "Entertainment",
         date: "2026-07-20",
         seats: 60,
-        description: "Competitive gaming."
+        description: "Competitive gaming.",
+        image: gamingImg
     },
 
     {
@@ -52,7 +66,8 @@ export const events = [
         type: "Lifestyle",
         date: "2026-07-22",
         seats: 80,
-        description: "Food and culture."
+        description: "Food and culture.",
+        image: foodImg
     },
 
     {
@@ -61,7 +76,8 @@ export const events = [
         type: "Art",
         date: "2026-07-25",
         seats: 70,
-        description: "Modern art display."
+        description: "Modern art display.",
+        image: artImg
     },
 
     {
@@ -70,7 +86,8 @@ export const events = [
         type: "Sport",
         date: "2026-07-31",
         seats: 1000,
-        description: "Fifa 2026 World Cup."
+        description: "Fifa 2026 World Cup.",
+        image: sportImg
     }
 
 ];
