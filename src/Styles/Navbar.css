@@ -12,6 +12,10 @@ nav{
 
     top: 0;
     position: fixed;
+    gap: 50px;
+
+  background: #2c2c2c;
+  color: white;
 }
 
 .nav-links{
@@ -26,7 +30,12 @@ nav{
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: rgba(0, 0, 0, 0.807);
+    color: white;
     font-weight: 500;
     list-style: none;
+    padding: 10px;
+}
+
+.links:hover{
+    background-color: #37373785;
 }
