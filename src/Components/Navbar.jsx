@@ -7,7 +7,7 @@ return(
     <React.Fragment>
         <nav className="header">
 
-            <div className="nav-logo">My Logo</div>
+            <div className="nav-logo"><img src="/Assets/Image/logo 2.png" alt="My Logo" width={300}/></div>
 
                 <div className="nav-links">
 
