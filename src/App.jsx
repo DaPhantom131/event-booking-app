@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Home from "./Components/Routes/Home";
 import Navbar from "./Components/Navbar";
+import Events from "./Components/Routes/Events";
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home/>}/>
+
+          <Route path="/events" element={<Events/>}/>
         </Routes>
 
 
