@@ -3,7 +3,12 @@ import React from "react";
 const Footer = () =>{
     return(
         <React.Fragment>
-            <h1>This is the Footer Area/Page</h1>
+
+           <footer>
+        <img src="/Assets/Image/logo 2.png" alt="My Logo" width={200} />
+                <p> &copy; {new Date().getFullYear()} ALL RIGHTS RESERVED.</p>
+           </footer>
+
         </React.Fragment>
     )
 }
