@@ -4,6 +4,7 @@ import Home from "./Components/Routes/Home";
 import Navbar from "./Components/Navbar";
 import Events from "./Components/Routes/Events";
 import Booking from "./Components/Routes/Booking";
+import Footer from "./Components/Footer";
 
 
 import "./Styles/Main.css";
@@ -28,7 +29,7 @@ function App() {
 
         </Routes>
 
-
+<Footer/>
 
       </React.Fragment>
 </BrowserRouter>
