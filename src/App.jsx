@@ -5,9 +5,11 @@ import Navbar from "./Components/Navbar";
 import Events from "./Components/Routes/Events";
 import Booking from "./Components/Routes/Booking";
 import Footer from "./Components/Footer";
+import EventDetails from "./Components/Routes/EventDetails";
 
 
 import "./Styles/Main.css";
+
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="/" element={<Home/>}/>
 
           <Route path="/events" element={<Events/>}/>
+
+          <Route path="/eventdetails" element ={<EventDetails/>} />
 
           <Route path="/bookings" element={<Booking/>}/>
 
