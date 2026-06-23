@@ -22,9 +22,11 @@ const EventCard = ({image, title, type, date, seats}) =>{
         </div>
 
         <div className="event-card-btn">
-            <button>
-                <Link to={"/EventDetails"}>View Event</Link>
-            </button>
+            
+                    <Link to={"/EventDetails"}>
+                    <button> View Event </button>
+                    </Link>
+            
         </div>
 
         </div>       

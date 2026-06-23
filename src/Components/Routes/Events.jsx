@@ -1,29 +1,31 @@
 import React from "react";
+
 import EventCard from "../EventCard";
-import img1 from "../../Assets/Image/Tech.jpg"
+import {events} from "../../Data/event.js"
+import "../../Styles/EventCard.css";
 
 const Events = () =>{
     return(
-        <React.Fragment>
-            <h2>This is the Events Page</h2>
+        <div className="event-page">
 
+            <h1>Upcoming Events</h1>
 
-            <EventCard 
-            image={img1}
-            title="Tech Conference"
-            type="Tech"
-            seats={50}
+            <div className="all-event-cards">
 
-            />
+                {events.map((event) => (
+                    <EventCard
+                        key={event.id}
+                        image={event.image}
+                        title={event.title}
+                        type={event.type}
+                        date={event.date}
+                        seats={event.seats}
+                        description={event.description} />
+                ))}
 
-            <EventCard
-                image={img1}
-                title="Camp Talk"
-                type="Nature"
-                seats={100}
-
-            />
-        </React.Fragment>
+            </div>
+            
+        </div>
     )
 }
 export default Events

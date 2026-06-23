@@ -1,11 +1,11 @@
-import aiImg from "../Assets/Image/AI.jpg"
-import artImg from "../Assets/Image/Art.jpg"
-import businessImg from "../Assets/Image/Business.jpg"
-import foodImg from "../Assets/Image/Food.jpg"
-import gamingImg from "../Assets/Image/Gaming.jpg"
-import musicImg from "../Assets/Image/Music.jpg"
-import sportImg from "../Assets/Image/Sport.jpg"
-import techImg from "../Assets/Image/Tech.jpg"
+import aiImg from "../Assets/Image/AI.jpg";
+import artImg from "../Assets/Image/Art.jpg";
+import businessImg from "../Assets/Image/Business.jpg";
+import foodImg from "../Assets/Image/Food.jpg";
+import gamingImg from "../Assets/Image/Gaming.jpg";
+import musicImg from "../Assets/Image/Music.jpg";
+import sportImg from "../Assets/Image/Sport.jpg";
+import techImg from "../Assets/Image/Tech.jpg";
 
 
 export const events = [
