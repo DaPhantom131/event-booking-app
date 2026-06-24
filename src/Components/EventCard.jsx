@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/EventCard.css"
 import { Link } from "react-router-dom";
 
-const EventCard = ({image, title, type, date, seats}) =>{
+const EventCard = ({id, description, image, title, type, date, seats}) =>{
     return(
         <React.Fragment>
 
@@ -23,7 +23,7 @@ const EventCard = ({image, title, type, date, seats}) =>{
 
         <div className="event-card-btn">
             
-                    <Link to={"/EventDetails"}>
+                    <Link to={`/eventdetails/${id}`}>
                     <button> View Event </button>
                     </Link>
             
