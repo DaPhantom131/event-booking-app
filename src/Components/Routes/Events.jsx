@@ -3,21 +3,41 @@ import React from "react";
 import EventCard from "../EventCard";
 import {events} from "../../Data/event.js"
 import "../../Styles/EventCard.css";
+import "../../Styles/Main.css";
 
 import { useState } from "react";
 
 const Events = () =>{
 
-    const [searchTerm, setSearchTerm] = useState(events);
+    const [eventItem, setEventItem] = useState(events);
+    const [activeEvent, setActiveEvent] = useState("All");
+    const [searchValue, setSearchValue] = useState("");
 
-    function onChange(e) {
-        const value = e.target.value.toLowerCase();
+    function filterEvents(type, search) {
+        let filtered = events;
 
-        const Filtered = events.filter(event =>
-            event.title.toLowerCase().includes(value)
-        )
+        if (type !== "All") {
+            filtered = filtered.filter((event) => event.type === type);
+        }
 
-        setSearchTerm(Filtered)
+        if (search.trim() !== "") {
+            filtered = filtered.filter((event) =>
+                event.title.toLowerCase().includes(search.toLowerCase())
+            );
+        }
+
+        setEventItem(filtered);
+    }
+
+    function handleSearch(e) {
+        const value = e.target.value;
+        setSearchValue(value);
+        filterEvents(activeEvent, value);
+    }
+
+    function handleCategory(type) {
+        setActiveEvent(type);
+        filterEvents(type, searchValue);
     }
 
 
@@ -29,13 +49,29 @@ const Events = () =>{
             <div className="search-bar">
                 <input
                  type="text" 
-                 placeholder="Search"
-                onChange={onChange} />
+                 placeholder="Search here.."
+                onChange={handleSearch} />
+            </div>
+
+
+            <div className="event-filters">
+                {["All", "Tech", "Music", "Business", "Entertainment", "Lifestyle", "Art", "Sport"].map(
+                    (type) => (
+                        <button
+                            key={type}
+                            className={`filter-btn ${activeEvent === type ? "filter-btn-active" : ""
+                                }`}
+                            onClick={() => handleCategory(type)}
+                        >
+                            {type}
+                        </button>
+                    )
+                )}
             </div>
 
             <div className="all-event-cards">
 
-                {searchTerm.map((event) => (
+                {eventItem.map((event) => (
                     <EventCard
                         key={event.id}
                         id={event.id}
