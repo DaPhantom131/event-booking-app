@@ -21,7 +21,9 @@ const EventDetails = () =>{
             <div className="event-description">{event.description}</div>
 
             <div className="event-details-buttons">
-                <button className="event-btn book-btn">Book Now</button>
+               <Link to={`/bookings/${id}`}>
+                        <button className="event-btn book-btn">Book Now</button>
+               </Link>
 
                 <Link to={"/events"}>
                         <button className="event-btn book-btn">Back to Events</button>

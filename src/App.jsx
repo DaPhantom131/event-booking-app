@@ -29,7 +29,7 @@ function App() {
 
           <Route path="/eventdetails/:id" element ={<EventDetails/>} />
 
-          <Route path="/bookings" element={<Booking/>}/>
+          <Route path="/bookings/:id" element={<Booking/>}/>
 
         </Routes>
 
