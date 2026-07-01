@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import EventCard from "../EventCard";
 import {events} from "../../Data/event.js"
@@ -9,9 +9,13 @@ import { useState } from "react";
 
 const Events = () =>{
 
-    const [eventItem, setEventItem] = useState(events);
+    const [eventItem, setEventItem] = useState([]);
     const [activeEvent, setActiveEvent] = useState("All");
     const [searchValue, setSearchValue] = useState("");
+
+    
+
+  
 
     function filterEvents(type, search) {
         let filtered = events;
@@ -40,6 +44,14 @@ const Events = () =>{
         filterEvents(type, searchValue);
     }
 
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+setEventItem(events)
+setLoading(false);
+        },3000)
+    },[])
 
     return(
         <div className="event-page">
@@ -69,21 +81,24 @@ const Events = () =>{
                 )}
             </div>
 
-            <div className="all-event-cards">
+         {loading ? (<h3>Loading Events..</h3> ) :
+         
+                <div className="all-event-cards">
 
-                {eventItem.map((event) => (
-                    <EventCard
-                        key={event.id}
-                        id={event.id}
-                        image={event.image}
-                        title={event.title}
-                        type={event.type}
-                        date={event.date}
-                        seats={event.seats}
-                        description={event.description} />
-                ))}
+                    {eventItem.map((event) => (
+                        <EventCard
+                            key={event.id}
+                            id={event.id}
+                            image={event.image}
+                            title={event.title}
+                            type={event.type}
+                            date={event.date}
+                            seats={event.seats}
+                            description={event.description} />
+                    ))}
 
-            </div>
+                </div>
+         }
             
         </div>
     )
