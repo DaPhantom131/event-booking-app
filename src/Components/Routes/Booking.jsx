@@ -47,7 +47,6 @@ useEffect(() => {
 
     },[isSubmit]);
 
-    console.log(formInputs);
     
  
 
